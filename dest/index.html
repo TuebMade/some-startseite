@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <!-- Metadaten -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123456">
+
+<!-- Title -->
+<title>Some</title>
+
+<!-- JavaScript -->
+<script>
+    function asSeen(x, y) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+            }
+        };
+        xmlhttp.open("GET", "php/isSeen.php?x=" + x + "&y=<?php echo $fdb ?>", true);
+        xmlhttp.send();
+        window.location.assign("https://some.chat/app/user.php?user=" + x + "#info")
+    }
+</script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="../resources/css/materialize.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="../resources/css/screen.css">
+  </head>
+  <body>
+    
+<div id="search" class="modal bottom-sheet" style="top: 0; max-height: none;">
+    <div class="row">
+        <form class="col s12" method="get" action="resources/php/search.php">
+            <div class="row">
+                <div class="input-field col s10">
+                    <i class="material-icons prefix" onclick="$('#search').modal('close')">close</i>
+                    <input type="text" id="input-search" class="autocomplete" name="search">
+                    <label for="input-search">Suche nach Freunden</label>
+                </div>
+                <div class="input-field col s2">
+                    <input type="submit" id="submit-search" class="hide">
+                    <label for="submit-search">
+                        <i class="material-icons">send</i>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="notification" class="modal" style="background-color: rgba(0,0,0,0) !important; box-shadow: none;">
+    <div class="modal-content">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Hallo <?php echo $info["FirstName"] ?>!</span>
+                <p>Ich habe dir hier eine kleine Übersicht deiner aktuellen Neuigkeiten zusammengefasst</p>
+            </div>
+        </div>
+        <div class="collection">
+            <a class="collection-item" onclick="asSeen('$suser')">
+                <div>
+                    <span class="flow-text">Kenneth hat seinen Status geändert</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="list" class="modal bottom-sheet" style="max-height: 80%;">
+    <div class="modal-content">
+        <div class="row">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">group</i>
+                        Feedback etc.
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="collection">
+                            <a class="collection-item" href="support/idea.php">
+                                <div>
+                                    Ideenpool
+                                    <i class="secondary-content material-icons">pool</i>
+                                </div>
+                            </a>
+                            <a class="collection-item" href="support/feedback.php">
+                                <div>
+                                    Feedback
+                                    <i class="secondary-content material-icons">feedback</i>
+                                </div>
+                            </a>
+                            <a class="collection-item" href="support/bug-report.php">
+                                <div>
+                                    Fehlermeldungen
+                                    <i class="secondary-content material-icons">bug_report</i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">videogame_asset</i>
+                        Deine Games
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <div>
+                                    Pokémon Sonne/ Mond
+                                    <a href="#!" class="secondary-content">
+                                        <i class="material-icons">send</i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>
+                                    Call of Duty: Black Ops 2
+                                    <a href="#!" class="secondary-content">
+                                        <i class="material-icons">send</i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>
+                                    Battlefield 1
+                                    <a href="#!" class="secondary-content">
+                                        <i class="material-icons">send</i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<nav>
+    <div class="nav-wrapper <?php echo $color ?> darken-3">
+        <ul class="left">
+            <li><a href="app.php"><i class="material-icons">refresh</i></a></li>
+        </ul>
+        <a class="brand-logo center">Hallo Marius!</a>
+        <a href="#notification" class="btn-floating btn-large halfway-fab waves-effect waves-light teal" style="right: 8px">
+            <i class="material-icons" style="transform: rotate(90deg)">polymer</i>
+        </a>
+    </div>
+</nav>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.modal').modal();
+        $("#search").modal({
+            dismissible: false
+        });
+        $(".button-collapse").sideNav();
+        $(".autocomplete").autocomplete({
+            data: {
+
+    }
+    });
+    });
+
+    function openUp(x) {
+        $("#" + x).modal('open');
+    }
+</script>
+  </body>
+</html>
