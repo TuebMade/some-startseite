@@ -68,13 +68,6 @@ img {
     left: 0;
     background: #222;
     width: 100%; }
-    .site nav a {
-      padding: 10px 30px;
-      font-size: 1.3em;
-      display: inline-block; }
-    .site nav a:hover {
-      background: #333;
-      color: #fff; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
