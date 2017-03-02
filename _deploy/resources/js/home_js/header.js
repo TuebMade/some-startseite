@@ -1,14 +1,14 @@
 //Based on the Scroller function from @sallar
 var $content = $('header .content')
     , $blur    = $('header .overlay')
-    , wHeight  = $(window).height() - $('nav').height();
+    , wHeight  = $(window).height();
 
 $('body').ready(function(){
     $('header').css("height", wHeight)
 })
 
 $(window).on('resize', function(){
-    wHeight = $(window).height() - $('nav').height();
+    wHeight = $(window).height();
     $('header').css("height", wHeight)
 });
 

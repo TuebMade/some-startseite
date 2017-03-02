@@ -30,8 +30,8 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #fff;
-    border: 5px solid #fff;
+    color: #c62828;
+    border: 5px solid #c62828;
     padding: .5em 3em;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 2; }
@@ -47,27 +47,18 @@ header {
     opacity: 0;
     -webkit-filter: blur(4px); }
 
-img {
-  margin-right: 20px; }
+#section01 {
+  padding-top: 4rem; }
 
-.site {
-  padding: 20em 0;
-  text-align: center;
-  background-color: #efefef;
-  font-size: .8em;
-  color: #444;
-  position: relative; }
-  .site a {
-    color: #666;
-    text-decoration: none; }
-  .site a:hover {
-    color: #222; }
-  .site nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #222;
-    width: 100%; }
+#registration .collapsible {
+  margin: 0; }
+  #registration .collapsible .collapsible-header {
+    text-align: center; }
+  #registration .collapsible .collapsible-body {
+    padding-bottom: 0; }
+
+#registration.section {
+  padding: 0; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
