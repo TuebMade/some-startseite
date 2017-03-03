@@ -11,7 +11,31 @@
     <body>
 
         
-<header>
+<div class="modal" id="login">
+    <div class="modal-content">
+        <form>
+            <div class="row">
+                <div class="col s12 m6 input-field">
+                    <input type="text" id="email_login" name="email_login">
+                    <label for="email_login">Deine Email</label>
+                </div>
+                <div class="col s12 m6 input-field">
+                    <input type="password" id="pass_login" name="pass_login">
+                    <label for="pass_login">Dein Passwort</label>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light col s12 m6" type="submit" name="action">
+                    Einloggen
+                    <i class="material-icons right">send</i>
+                </button>
+                <div class="col s12 m6">
+                    <a href="support/pass_reset.php">Passwort vergessen</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><header>
     <div class="content">
         <hgroup>
             <h1>Some</h1>
@@ -21,8 +45,7 @@
     <div class="overlay">
 
     </div>
-</header>
-<nav class="red darken-3 z-depth-2">
+</header><nav class="red darken-3 z-depth-2">
     <div class="nav-wrapper">
         <a class="brand-logo left hide-on-med-and-down" href="#!">Some - DER Soziale Messenger</a>
         <a class="brand-logo center hide-on-large-only" href="#!">Some - DER Soziale Messenger</a>
@@ -35,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="waves-effect waves-light btn red darken-1">
+                    <a href="#login" class="waves-effect waves-light btn red darken-1">
                         Log-In
                         <i class="material-icons right">vpn_key</i>
                     </a>
@@ -44,6 +67,9 @@
         </form>
     </div>
 </nav><div class="section white darken-2" id="section01">
+    <div class="collection hide-on-large-only">
+        <a class="collection-item black-text center" href="#login">Log-In</a>
+    </div>
     <div class="row container">
         <h2 class="header">Want Some Chat?</h2>
         <p class="grey-text text-darken-3">Some ist ein Sozialer Messenger. Warum Sozialer Messenger? Das heißt doch normalerweise Soziales Netzwerk... </p>
@@ -109,7 +135,30 @@
         <p class="grey-text text-darken-3">Das ist ganz einfach zu beantworten!</p>
         <p class="grey-text text-darken-3">Some verbindet das Beste aus Whatsapp, Facebook, Twitter und Instagram. Bleibt dabei leicht und übersichtlich und verliert nicht den Fokus auf`s Messaging.</p>
     </div>
-</div>
+</div><footer class="page-footer red darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Some</h5>
+                <p class="grey-text text-lighten-4">Some ist ein junger Sozialer Messenger, der Seinesgleichen sucht.</p>
+            </div>
+            <div class="col l5 offset-l1 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="about.html">Über Some</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Kontaktieren Sie die Entwickler</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Die Unterstützer</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016 Copyright Some
+            <a class="grey-text text-lighten-4 right" href="#!">Impressum</a>
+        </div>
+    </div>
+</footer>
         <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script src="../../resources/js/home_js/header.js"></script>
@@ -119,6 +168,7 @@
                     selectMonths: true, // Creates a dropdown to control month
                     selectYears: 200 // Creates a dropdown of 15 years to control year
                 });
+                $('.modal').modal();
             });
         </script>
     </body>

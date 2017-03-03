@@ -49,6 +49,8 @@ header {
 
 #section01 {
   padding-top: 4rem; }
+  #section01 .collection {
+    margin-top: 0; }
 
 #registration .collapsible {
   margin: 0; }
