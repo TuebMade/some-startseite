@@ -1,9 +1,9 @@
 {
-  "name": "VichyATHomeBanner",
+  "name": "RidingTheMadness",
   "version": "1.0.0",
   "description": "",
   "main": "Gruntfile.js",
-  "author": "Stefan Wilhelm <swilhelm@bplusd.de>",
+  "author": "Marius Holz",
   "license": "none",
   "devDependencies": {
     "autoprefixer": "^6.7.4",

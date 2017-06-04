@@ -1,10 +1,22 @@
 ---
 title: Some
 ---
-{{>home_log-in}}
-{{>header}}
-{{>home_nav}}
-{{>home_section01}}
-{{>home_registration}}
-{{>home_section02}}
+{{>sidebar}}
+{{>nav}}
+<div class="row">
+    <div class="col s12 grey darken-1 center" style="height:350px; padding-top: 125px;">
+        <div class="white" style="box-shadow: 0px 0px 5px #888; max-width:1088px; margin:0px auto; text-align:left; padding:20px;">
+            <h1 class="hide-on-med-and-down center" style="font-family:dark;">Welcome To The Madness</h1><h4 class="hide-on-large-only center" style="font-family:dark;">Welcome To The Madness</h4>
+            <div class="video-container">
+                <iframe width="853" height="480" src="//www.youtube.com/embed/eNUgBQZ1KKc?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <ul id="tabs-swipe-demo row" class="tabs">
+                <li class="tab col s6"><a href="#test-swipe-1">Deutsch</a></li>
+                <li class="tab col s6"><a class="active" href="#test-swipe-2">English</a></li>
+            </ul>
+            {{>home_sectionGerman}}
+            {{>home_sectionEnglish}}
+        </div>
+    </div>
+</div>
 {{>footer}}
